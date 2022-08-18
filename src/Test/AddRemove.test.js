@@ -33,3 +33,16 @@ const remove = (targetIndex) => {
   );
   clear = updateList.length;
 };
+
+describe('Adding items', () => {
+  newTodoList('completed tasks');
+  newTodoList('send tasks');
+  newTodoList('completed');
+  newTodoList('start next task');
+  test('Check if newTodoList is a function', () => {
+    expect(typeof newTodoList).toBe('function');
+  });
+  test('Testing if newTodolist is adding', () => {
+    expect(ItemList).toBe(4);
+  });
+});
