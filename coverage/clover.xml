@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1660841460771" clover="3.2.0">
-  <project timestamp="1660841460772" name="All files">
+<coverage generated="1660846804094" clover="3.2.0">
+  <project timestamp="1660846804094" name="All files">
     <metrics statements="14" coveredstatements="14" conditionals="6" coveredconditionals="5" methods="3" coveredmethods="3" elements="23" coveredelements="22" complexity="0" loc="14" ncloc="14" packages="1" files="1" classes="1"/>
-    <file name="mocks.js" path="D:\microverse\Module-2\Week-3\Testing-To-Do-list-Part-1\src\modules\_mocks_\mocks.js">
+    <file name="mocks.js" path="C:\Users\Robin\Microverse_Module_2\Testing-To-Do-list-Part-1\src\modules\_mocks_\mocks.js">
       <metrics statements="14" coveredstatements="14" conditionals="6" coveredconditionals="5" methods="3" coveredmethods="3"/>
       <line num="4" count="1" type="stmt"/>
       <line num="13" count="1" type="stmt"/>
