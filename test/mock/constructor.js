@@ -8,4 +8,12 @@ export default class ToDoList {
     ToDoList.list.push(this);
     this.getList = () => ToDoList.list;
   }
+
+  update() {
+    if (this.complete) {
+      this.complete = false;
+    } else {
+      this.complete = true;
+    }
+  }
 }

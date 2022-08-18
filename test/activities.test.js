@@ -1,7 +1,7 @@
-import { addItem, clear, update, clearAll } from './activities.js';
+import {
+  addItem, clear, update, clearAll,
+} from './activities.js';
 import ToDo from '../src/modules/constructor.js';
-
-const activities = require('./activities.js');
 
 describe('Tests for todo list app', () => {
   test('should add item to the list', () => {
