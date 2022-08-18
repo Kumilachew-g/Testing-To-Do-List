@@ -34,13 +34,9 @@ describe('Editing items in todos', () => {
     expect(typeof edit).toBe('function');
   });
   test('Testing if todos are edited in array', () => {
-    expect(edit(2, 'api')).toEqual([{ completedTask: false, description: 'send tasks', id: 2 },
-      { completedTask: false, description: 'api', id: 3 },
-      { completedTask: false, description: 'start next task', id: 4 },
-      { completedTask: false, id: 5 }]);
+    expect(edit(3, 'Cristina')).toEqual([{"completedTask": false, "description": "completed tasks", "id": 1}, {"completedTask": false, "description": "send tasks", "id": 2}, {"completedTask": false, "description": "Cristina", "id": 3}, {"completedTask": false, "description": "start next task", "id": 4}, {"completedTask": false, "id": 5}]);
   });
-});
-// describe('Clearing all items in todos', () => {
+});// describe('Clearing all items in todos', () => {
 //   test('check if clearAll is a function', () => {
 //     expect(typeof clearAll).toBe('function');
 //   });
