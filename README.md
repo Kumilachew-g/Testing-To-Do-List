@@ -36,6 +36,8 @@ To access a local copy up and runn follow these simple steps.
 - Twitter: [@twitterhandle](https://twitter.com/Getie_Haddis)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/kumilachew-getie-0356bb157/)
 
+👤 **Angel Uray** **and** 👤 **Robin Benitez** **Github**
+
 - Angel GitHub: [@githubhandle](https://github.com/angeluray)
 - Robin GitHub: [@githubhandle](https://github.com/robinbenitezmora)
 
