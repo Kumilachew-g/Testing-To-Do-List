@@ -32,6 +32,8 @@ To access a local copy up and runn follow these simple steps.
 
 👤 **Robin Benitez**
 
+## Contact Us
+
 - GitHub: [@githubhandle](https://github.com/Kumilachew-g/)
 - Twitter: [@twitterhandle](https://twitter.com/Getie_Haddis)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/kumilachew-getie-0356bb157/)
