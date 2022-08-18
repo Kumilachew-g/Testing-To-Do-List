@@ -29,7 +29,7 @@ const newTodoList = (e) => {
 const remove = (targetIndex) => {
   const todoListArray = JSON.parse(localStorage.getItem('todos') || '[]');
   const updateList = todoListArray.filter(
-    (todos) => todos.id !== parseInt(targetIndex, 10)
+    (todos) => todos.id !== parseInt(targetIndex, 10),
   );
   clear = updateList.length;
 };
