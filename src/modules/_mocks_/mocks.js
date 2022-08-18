@@ -1,3 +1,5 @@
+const { update } = require('lodash');
+
 /**
  * @jest-environment jsdom
  */
@@ -24,6 +26,7 @@ const newTodoList = (e) => {
   const update = [...tobeDone, newTodoList];
   localStorage.setItem('todos', JSON.stringify(update));
   ItemList = update.length;
+  return update;
 };
 
 const remove = (targetIndex) => {
@@ -31,10 +34,32 @@ const remove = (targetIndex) => {
   const updateList = todoListArray.filter(
     (todos) => todos.id !== parseInt(targetIndex, 10),
   );
-  clear = updateList.length;
+  return updateList;
+};
+
+const edit = (targetIndex, newDescription) => {
+  const todoListArray = JSON.parse(localStorage.getItem('todos') || '[]');
+  const updateList = todoListArray.map((todos) => {
+    if (todos.id === parseInt(targetIndex, 10)) {
+      return {
+        ...todos,
+        description: newDescription,
+      };
+    }
+    return todos;
+  }).filter((todos) => todos.id !== parseInt(targetIndex, 10));
+  return updateList;
+};
+
+const clearAll = () => {
+  const todoListArray = JSON.parse(localStorage.getItem('todos') || '[]');
+  const updateList = todoListArray.filter((todos) => todos.completedTask === false);
+  return updateList;
 };
 
 module.exports = {
   newTodoList,
   remove,
+  edit,
+  clearAll,
 };

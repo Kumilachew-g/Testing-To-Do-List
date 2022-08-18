@@ -1,23 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1660846804094" clover="3.2.0">
-  <project timestamp="1660846804094" name="All files">
-    <metrics statements="14" coveredstatements="14" conditionals="6" coveredconditionals="5" methods="3" coveredmethods="3" elements="23" coveredelements="22" complexity="0" loc="14" ncloc="14" packages="1" files="1" classes="1"/>
+<coverage generated="1660857262151" clover="3.2.0">
+  <project timestamp="1660857262152" name="All files">
+    <metrics statements="28" coveredstatements="25" conditionals="12" coveredconditionals="8" methods="8" coveredmethods="6" elements="48" coveredelements="39" complexity="0" loc="28" ncloc="28" packages="1" files="1" classes="1"/>
     <file name="mocks.js" path="C:\Users\Robin\Microverse_Module_2\Testing-To-Do-list-Part-1\src\modules\_mocks_\mocks.js">
-      <metrics statements="14" coveredstatements="14" conditionals="6" coveredconditionals="5" methods="3" coveredmethods="3"/>
-      <line num="4" count="1" type="stmt"/>
-      <line num="13" count="1" type="stmt"/>
-      <line num="14" count="4" type="stmt"/>
-      <line num="15" count="4" type="cond" truecount="2" falsecount="0"/>
-      <line num="17" count="4" type="stmt"/>
-      <line num="24" count="4" type="stmt"/>
-      <line num="25" count="4" type="stmt"/>
-      <line num="26" count="4" type="stmt"/>
-      <line num="29" count="1" type="stmt"/>
-      <line num="30" count="2" type="cond" truecount="1" falsecount="1"/>
-      <line num="31" count="2" type="stmt"/>
-      <line num="32" count="8" type="stmt"/>
-      <line num="34" count="2" type="stmt"/>
+      <metrics statements="28" coveredstatements="25" conditionals="12" coveredconditionals="8" methods="8" coveredmethods="6"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="16" count="5" type="stmt"/>
+      <line num="17" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="19" count="5" type="stmt"/>
+      <line num="26" count="5" type="stmt"/>
+      <line num="27" count="5" type="stmt"/>
+      <line num="28" count="5" type="stmt"/>
+      <line num="29" count="5" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
+      <line num="33" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="34" count="1" type="stmt"/>
+      <line num="35" count="5" type="stmt"/>
       <line num="37" count="1" type="stmt"/>
+      <line num="40" count="1" type="stmt"/>
+      <line num="41" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="42" count="1" type="stmt"/>
+      <line num="43" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="44" count="1" type="stmt"/>
+      <line num="49" count="4" type="stmt"/>
+      <line num="50" count="5" type="stmt"/>
+      <line num="51" count="1" type="stmt"/>
+      <line num="54" count="1" type="stmt"/>
+      <line num="55" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="56" count="0" type="stmt"/>
+      <line num="57" count="0" type="stmt"/>
+      <line num="60" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
