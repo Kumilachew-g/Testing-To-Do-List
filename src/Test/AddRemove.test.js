@@ -34,6 +34,7 @@ const remove = (targetIndex) => {
   clear = updateList.length;
 };
 
+// add item test
 describe('Adding items', () => {
   newTodoList('completed tasks');
   newTodoList('send tasks');
@@ -46,3 +47,7 @@ describe('Adding items', () => {
     expect(ItemList).toBe(4);
   });
 });
+
+// remove item test
+
+//
