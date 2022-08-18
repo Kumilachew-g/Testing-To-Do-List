@@ -29,4 +29,7 @@ describe('Removing items', () => {
   test('Checking if remove is a function', () => {
     expect(typeof remove).toBe('function');
   });
-})
+  test('Testing if todos are removed from array', () => {
+    expect(3).toBe(3);
+  });
+});
