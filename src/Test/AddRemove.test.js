@@ -14,7 +14,7 @@ describe('Adding items', () => {
     expect(typeof newTodoList).toBe('function');
   });
   test('test if newTodolist is adding', () => {
-    expect(4).toBe(4);
+    expect(4 + 6).toBe(10);
   });
 });
 
