@@ -24,6 +24,9 @@ describe('removing item in todos', () => {
     expect(typeof remove).toBe('function');
   });
 });
-// remove item test
-
-//
+describe('Removing items', () => {
+  remove(1);
+  test('Checking if remove is a function', () => {
+    expect(typeof remove).toBe('function');
+  });
+})
