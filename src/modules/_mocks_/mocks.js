@@ -47,7 +47,7 @@ const edit = (targetIndex, newDescription) => {
       };
     }
     return todos;
-  }).filter((todos) => todos.id !== parseInt(targetIndex, 10));
+  });
   return updateList;
 };
 
