@@ -39,7 +39,13 @@ To access a local copy up and runn follow these simple steps.
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/kumilachew-getie-0356bb157/)
 
 - Angel GitHub: [@githubhandle](https://github.com/angeluray)
+- Twitter: [@twitterhandle](https://twitter.com/atangeluray)
+- LinkedIn: [LinkedIn](www.linkedin.com/in/angeluray-jobs)
+
 - Robin GitHub: [@githubhandle](https://github.com/robinbenitezmora)
+- Twitter: [@twitterhandle](https://twitter.com/Mecanico_robin)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/robin-benitez-mora-manizales)
+
 
 ## 🤝 Contributing
 
