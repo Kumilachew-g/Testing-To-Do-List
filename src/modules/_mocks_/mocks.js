@@ -1,3 +1,5 @@
+const { update } = require('lodash');
+
 /**
  * @jest-environment jsdom
  */
@@ -24,6 +26,7 @@ const newTodoList = (e) => {
   const update = [...tobeDone, newTodoList];
   localStorage.setItem('todos', JSON.stringify(update));
   ItemList = update.length;
+  return update;
 };
 
 const remove = (targetIndex) => {
@@ -31,7 +34,7 @@ const remove = (targetIndex) => {
   const updateList = todoListArray.filter(
     (todos) => todos.id !== parseInt(targetIndex, 10),
   );
-  clear = updateList.length;
+  return updateList;
 };
 
 module.exports = {
