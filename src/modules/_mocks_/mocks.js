@@ -11,7 +11,6 @@ document.body.innerHTML = `
 
 let ItemList;
 let clear;
-
 const newTodoList = (e) => {
   const newDoing = e;
   const tobeDone = JSON.parse(localStorage.getItem('todos') || '[]');
@@ -32,12 +31,50 @@ const newTodoList = (e) => {
 const remove = (targetIndex) => {
   const todoListArray = JSON.parse(localStorage.getItem('todos') || '[]');
   const updateList = todoListArray.filter(
-    (todos) => todos.id !== parseInt(targetIndex, 10),
+    (todos) => todos.id !== parseInt(targetIndex, 10)
   );
   return updateList;
 };
 
+const edit = (targetIndex, newDescription) => {
+  const todoListArray = JSON.parse(localStorage.getItem('todos') || '[]');
+  const updateList = todoListArray.map((todos) => {
+    if (todos.id === parseInt(targetIndex, 10)) {
+      return {
+        ...todos,
+        description: newDescription,
+      };
+    }
+    return todos;
+  });
+  return updateList;
+};
+
+const checkComplete = (id) => {
+  const todoListArray = JSON.parse(localStorage.getItem('todos') || '[]');
+  const updateTodoList = todoListArray.map((todos) => {
+    if (todos.id === parseInt(id, 10)) {
+      return { ...todos, completedTask: !todos.completedTask };
+    }
+    return todos;
+  });
+  localStorage.setItem('todos', JSON.stringify(updateTodoList));
+  return updateTodoList;
+};
+
+const clearAll = () => {
+  const todoListArray = JSON.parse(localStorage.getItem('todos') || '[]');
+  const updateList = todoListArray.filter(
+    (todos) => todos.completedTask !== true
+  );
+  return updateList;
+};
+
+// export variables
 module.exports = {
   newTodoList,
   remove,
+  edit,
+  checkComplete,
+  clearAll,
 };
