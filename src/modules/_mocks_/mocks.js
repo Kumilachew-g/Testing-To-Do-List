@@ -47,7 +47,11 @@ const edit = (targetIndex, newDescription) => {
       };
     }
     return todos;
+<<<<<<< HEAD
   })
+=======
+  });
+>>>>>>> a2270ca10827f4d1f94dce397881fe5bc4b0745f
   return updateList;
 };
 
