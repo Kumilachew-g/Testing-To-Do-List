@@ -34,7 +34,7 @@ describe('Editing items in todos', () => {
     expect(typeof edit).toBe('function');
   });
   test('Testing if todos are edited in array', () => {
-    expect(edit(3, 'Cristina')).toEqual([{"completedTask": false, "description": "completed tasks", "id": 1}, {"completedTask": false, "description": "send tasks", "id": 2}, {"completedTask": false, "description": "Cristina", "id": 3}, {"completedTask": false, "description": "start next task", "id": 4}, {"completedTask": false, "id": 5}]);
+    expect(edit(3, 'Cristina')).toEqual([{ completedTask: false, description: 'completed tasks', id: 1 }, { completedTask: false, description: 'send tasks', id: 2 }, { completedTask: false, description: 'Cristina', id: 3 }, { completedTask: false, description: 'start next task', id: 4 }, { completedTask: false, id: 5 }]);
   });
 });
 
@@ -43,7 +43,7 @@ describe('check if to-do list is complete', () => {
     expect(typeof checkComplete).toBe('function');
   });
   test('check is complete', () => {
-    expect(checkComplete(3)).toEqual([{"completedTask": false, "description": "completed tasks", "id": 1}, {"completedTask": false, "description": "send tasks", "id": 2}, {"completedTask": true, "description": "completed", "id": 3}, {"completedTask": false, "description": "start next task", "id": 4}, {"completedTask": false, "id": 5}]);
+    expect(checkComplete(3)).toEqual([{ completedTask: false, description: 'completed tasks', id: 1 }, { completedTask: false, description: 'send tasks', id: 2 }, { completedTask: true, description: 'completed', id: 3 }, { completedTask: false, description: 'start next task', id: 4 }, { completedTask: false, id: 5 }]);
   });
 });
 
@@ -52,6 +52,6 @@ describe('Clearing all items in todos', () => {
     expect(typeof clearAll).toBe('function');
   });
   test('Testing if Completed To-Dos are deleted', () => {
-    expect(clearAll()).toEqual([{"completedTask": false, "description": "completed tasks", "id": 1}, {"completedTask": false, "description": "send tasks", "id": 2}, {"completedTask": false, "description": "start next task", "id": 4}, {"completedTask": false, "id": 5}]);
+    expect(clearAll()).toEqual([{ completedTask: false, description: 'completed tasks', id: 1 }, { completedTask: false, description: 'send tasks', id: 2 }, { completedTask: false, description: 'start next task', id: 4 }, { completedTask: false, id: 5 }]);
   });
-})
+});
