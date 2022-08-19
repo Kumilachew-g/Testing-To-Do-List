@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">86.2% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>25/29</span>
-            </div>
-        
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">66.66% </span>
-                <span class="quiet">Branches</span>
-                <span class='fraction'>8/12</span>
+                <span class='fraction'>36/36</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">75% </span>
-                <span class="quiet">Functions</span>
-                <span class='fraction'>6/8</span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>12/16</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">89.28% </span>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>9/9</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>25/28</span>
+                <span class='fraction'>35/35</span>
             </div>
         
             
@@ -128,7 +128,19 @@
 <a name='L63'></a><a href='#L63'>63</a>
 <a name='L64'></a><a href='#L64'>64</a>
 <a name='L65'></a><a href='#L65'>65</a>
-<a name='L66'></a><a href='#L66'>66</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -177,17 +189,29 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -242,20 +266,32 @@ const edit = (targetIndex, newDescription) =&gt; {
       };
     }
     return todos;
-  }).filter((todos) =&gt; todos.id !== parseInt(targetIndex, 10));
+  })
   return updateList;
 };
 &nbsp;
-const clearAll = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-  const todoListArray = <span class="cstat-no" title="statement not covered" >JSON.parse(localStorage.getItem('todos') || '[]');</span>
-  const updateList = <span class="cstat-no" title="statement not covered" >todoListArray.filter(<span class="fstat-no" title="function not covered" >(t</span>odos) =&gt; <span class="cstat-no" title="statement not covered" >todos.completedTask === false)</span>;</span>
-<span class="cstat-no" title="statement not covered" >  return updateList;</span>
+const checkComplete = (id) =&gt; {
+  const todoListArray = JSON.parse(localStorage.getItem('todos') || <span class="branch-1 cbranch-no" title="branch not covered" >'[]')</span>;
+  const updateTodoList = todoListArray.map((todos) =&gt; {
+    if (todos.id === parseInt(id, 10)) {
+      return { ...todos, completedTask: !todos.completedTask };
+    }
+    return todos;
+  });
+  localStorage.setItem('todos', JSON.stringify(updateTodoList));
+  return updateTodoList;
 };
 &nbsp;
+const clearAll = () =&gt; {
+  const todoListArray = JSON.parse(localStorage.getItem('todos') || <span class="branch-1 cbranch-no" title="branch not covered" >'[]')</span>;
+  const updateList = todoListArray.filter((todos) =&gt; todos.completedTask === false);
+  return updateList;
+};
 module.exports = {
   newTodoList,
   remove,
   edit,
+  checkComplete,
   clearAll,
 };
 &nbsp;</pre></td></tr></table></pre>
@@ -265,7 +301,7 @@ module.exports = {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2022-08-18T21:14:22.072Z
+                at 2022-08-19T02:03:11.971Z
             </div>
         <script src="prettify.js"></script>
         <script>

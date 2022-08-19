@@ -47,8 +47,20 @@ const edit = (targetIndex, newDescription) => {
       };
     }
     return todos;
-  }).filter((todos) => todos.id !== parseInt(targetIndex, 10));
+  })
   return updateList;
+};
+
+const checkComplete = (id) => {
+  const todoListArray = JSON.parse(localStorage.getItem('todos') || '[]');
+  const updateTodoList = todoListArray.map((todos) => {
+    if (todos.id === parseInt(id, 10)) {
+      return { ...todos, completedTask: !todos.completedTask };
+    }
+    return todos;
+  });
+  localStorage.setItem('todos', JSON.stringify(updateTodoList));
+  return updateTodoList;
 };
 
 const clearAll = () => {
@@ -56,10 +68,10 @@ const clearAll = () => {
   const updateList = todoListArray.filter((todos) => todos.completedTask === false);
   return updateList;
 };
-
 module.exports = {
   newTodoList,
   remove,
   edit,
+  checkComplete,
   clearAll,
 };
