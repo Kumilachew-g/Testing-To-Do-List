@@ -33,7 +33,7 @@ const newTodoList = (e) => {
 const remove = (targetIndex) => {
   const todoListArray = JSON.parse(localStorage.getItem('todos') || '[]');
   const updateList = todoListArray.filter(
-    (todos) => todos.id !== parseInt(targetIndex, 10),
+    (todos) => todos.id !== parseInt(targetIndex, 10)
   );
   return updateList;
 };
@@ -70,7 +70,7 @@ const checkComplete = (id) => {
 const clearAll = () => {
   const todoListArray = JSON.parse(localStorage.getItem('todos') || '[]');
   const updateList = todoListArray.filter(
-    (todos) => todos.completedTask !== true,
+    (todos) => todos.completedTask !== true
   );
   return updateList;
 };
